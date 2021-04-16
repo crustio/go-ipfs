@@ -10,6 +10,7 @@ import (
 	"strings"
 	"sync"
 
+	crust "github.com/crustio/go-ipfs-encryptor/crust"
 	filestore "github.com/ipfs/go-filestore"
 	keystore "github.com/ipfs/go-ipfs/keystore"
 	repo "github.com/ipfs/go-ipfs/repo"
@@ -290,6 +291,8 @@ func Init(repoPath string, conf *config.Config) error {
 	if err := initSpec(repoPath, conf.Datastore.Spec); err != nil {
 		return err
 	}
+
+	crust.Worker.SetUrl(conf.Datastore.Spec["crust"].(string))
 
 	if err := mfsr.RepoPath(repoPath).WriteVersion(RepoVersion); err != nil {
 		return err
