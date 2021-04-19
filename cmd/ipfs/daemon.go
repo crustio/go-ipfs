@@ -450,8 +450,10 @@ func daemonFunc(req *cmds.Request, re cmds.ResponseEmitter, env cmds.Environment
 	}
 
 	if cc, ok := cfg.Datastore.Spec["crust"]; ok {
-		crust.Worker.SetUrl(cc.(string))
-		fmt.Printf("Crust sworker url: %s\n", cc.(string))
+		if len(cc.(string)) != 0 {
+			crust.Worker.SetUrl(cc.(string))
+			fmt.Printf("Crust sworker url: %s\n", cc.(string))
+		}
 	}
 
 	// The daemon is *finally* ready.
