@@ -112,6 +112,7 @@ require (
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c
 )
 
+replace github.com/ipfs/go-ipfs-blockstore v0.1.4 => /home/crust/code/go-ipfs-blockstore
 replace github.com/ipfs/go-blockservice v0.1.4 => /home/crust/code/go-blockservice
 replace github.com/ipfs/go-ds-badger v0.2.6 => /home/crust/code/go-ds-badger
 replace github.com/ipfs/go-ipfs-pinner v0.1.1 => /home/crust/code/go-ipfs-pinner
