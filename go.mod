@@ -112,6 +112,7 @@ require (
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c
 )
 
+replace github.com/ipfs/go-bitswap v0.3.3 => /home/crust/code/go-bitswap
 replace github.com/ipfs/go-merkledag v0.3.2 => /home/crust/code/go-merkledag
 replace github.com/ipfs/go-ipfs-blockstore v0.1.4 => /home/crust/code/go-ipfs-blockstore
 replace github.com/ipfs/go-blockservice v0.1.4 => /home/crust/code/go-blockservice
