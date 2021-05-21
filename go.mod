@@ -117,7 +117,6 @@ replace github.com/ipfs/go-ipfs-blockstore v0.1.4 => /home/crust/code/go-ipfs-bl
 replace github.com/ipfs/go-blockservice v0.1.4 => /home/crust/code/go-blockservice
 replace github.com/ipfs/go-ds-badger v0.2.6 => /home/crust/code/go-ds-badger
 replace github.com/ipfs/go-ipfs-pinner v0.1.1 => /home/crust/code/go-ipfs-pinner
-replace github.com/ipfs/go-ds-measure v0.1.0 => /home/crust/code/go-ds-measure
 replace github.com/ipfs/go-ipfs-config v0.12.0 => /home/crust/code/go-ipfs-config
 replace github.com/crustio/go-ipfs-encryptor v0.0.0-20210419092531-3f22dbe7ffc7 => /home/crust/code/go-ipfs-encryptor
 
