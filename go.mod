@@ -112,13 +112,13 @@ require (
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c
 )
 
-replace github.com/ipfs/go-bitswap v0.3.3 => /home/crust/code/go-bitswap
-replace github.com/ipfs/go-merkledag v0.3.2 => /home/crust/code/go-merkledag
-replace github.com/ipfs/go-ipfs-blockstore v0.1.4 => /home/crust/code/go-ipfs-blockstore
-replace github.com/ipfs/go-blockservice v0.1.4 => /home/crust/code/go-blockservice
-replace github.com/ipfs/go-ds-badger v0.2.6 => /home/crust/code/go-ds-badger
-replace github.com/ipfs/go-ipfs-pinner v0.1.1 => /home/crust/code/go-ipfs-pinner
-replace github.com/ipfs/go-ipfs-config v0.12.0 => /home/crust/code/go-ipfs-config
-replace github.com/crustio/go-ipfs-encryptor v0.0.0-20210419092531-3f22dbe7ffc7 => /home/crust/code/go-ipfs-encryptor
+replace github.com/ipfs/go-bitswap => /home/crust/code/go-bitswap
+replace github.com/ipfs/go-merkledag => /home/crust/code/go-merkledag
+replace github.com/ipfs/go-ipfs-blockstore => /home/crust/code/go-ipfs-blockstore
+replace github.com/ipfs/go-blockservice => /home/crust/code/go-blockservice
+replace github.com/ipfs/go-ds-badger => /home/crust/code/go-ds-badger
+replace github.com/ipfs/go-ipfs-pinner => /home/crust/code/go-ipfs-pinner
+replace github.com/ipfs/go-ipfs-config => /home/crust/code/go-ipfs-config
+replace github.com/crustio/go-ipfs-encryptor => /home/crust/code/go-ipfs-encryptor
 
 go 1.14
