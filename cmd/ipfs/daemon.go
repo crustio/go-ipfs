@@ -12,6 +12,7 @@ import (
 	"sort"
 	"sync"
 
+	"github.com/crustio/go-ipfs-encryptor/crust"
 	multierror "github.com/hashicorp/go-multierror"
 
 	version "github.com/ipfs/go-ipfs"
@@ -441,6 +442,19 @@ func daemonFunc(req *cmds.Request, re cmds.ResponseEmitter, env cmds.Environment
 
 	// start MFS pinning thread
 	startPinMFS(daemonConfigPollInterval, cctx, &ipfsPinMFSNode{node})
+
+	// Set crust
+	cfg, err := repo.Config()
+	if err != nil {
+		return err
+	}
+
+	if cc, ok := cfg.Datastore.Spec["crust"]; ok {
+		if len(cc.(string)) != 0 {
+			crust.Worker.SetUrl(cc.(string))
+			fmt.Printf("Crust sworker url: %s\n", cc.(string))
+		}
+	}
 
 	// The daemon is *finally* ready.
 	fmt.Printf("Daemon is ready\n")

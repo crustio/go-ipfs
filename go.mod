@@ -7,6 +7,7 @@ require (
 	github.com/bren2010/proquint v0.0.0-20160323162903-38337c27106d
 	github.com/cheggaaa/pb v1.0.29
 	github.com/coreos/go-systemd/v22 v22.1.0
+	github.com/crustio/go-ipfs-encryptor v0.0.0-20210419092531-3f22dbe7ffc7
 	github.com/dustin/go-humanize v1.0.0
 	github.com/elgris/jsondiff v0.0.0-20160530203242-765b5c24c302
 	github.com/fsnotify/fsnotify v1.4.9
@@ -110,5 +111,16 @@ require (
 	golang.org/x/sync v0.0.0-20201207232520-09787c993a3a
 	golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c
 )
+
+replace github.com/ipfs/go-bitswap => ./local/go-bitswap
+replace github.com/ipfs/go-merkledag => ./local/go-merkledag
+replace github.com/ipfs/go-ipfs-blockstore => ./local/go-ipfs-blockstore
+replace github.com/ipfs/go-blockservice => ./local/go-blockservice
+replace github.com/ipfs/go-ds-badger => ./local/go-ds-badger
+replace github.com/ipfs/go-ds-flatfs => ./local/go-ds-flatfs
+replace github.com/ipfs/go-ds-leveldb => ./local/go-ds-leveldb
+replace github.com/ipfs/go-ipfs-pinner => ./local/go-ipfs-pinner
+replace github.com/ipfs/go-ipfs-config => ./local/go-ipfs-config
+replace github.com/crustio/go-ipfs-encryptor => ./local/go-ipfs-encryptor
 
 go 1.14

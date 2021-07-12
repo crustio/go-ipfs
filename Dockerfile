@@ -9,13 +9,12 @@ RUN apt-get update && apt-get install -y \
   fuse
 
 ENV SRC_DIR /go-ipfs
+COPY . $SRC_DIR
 
 # Download packages first so they can be cached.
 COPY go.mod go.sum $SRC_DIR/
 RUN cd $SRC_DIR \
   && go mod download
-
-COPY . $SRC_DIR
 
 # Preload an in-tree but disabled-by-default plugin by adding it to the IPFS_PLUGINS variable
 # e.g. docker build --build-arg IPFS_PLUGINS="foo bar baz"
